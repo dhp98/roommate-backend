@@ -1,0 +1,151 @@
+register
+login
+
+/profile/
+GET
+req.body: {FILTERS RoomatePreference fields = similar to = Profile} 
+res.status(200).send(
+    {
+        "message": "",
+        "data": {
+            "users": "Send back list of Profile with userID field populated" 
+        }
+    }
+)
+
+/profile/:userID
+GET
+req.body: {} 
+res.status(200).send(
+    {
+        "message": "",
+        "data": {
+            "profile": Profile Object. Also populate the userID field
+        }
+    }
+)
+
+/profile
+POST
+req.body: Profile schema 
+res.status(201).send(
+    {
+        "message": "",
+        "data": {
+            "createdProfile": Profile Object
+        }
+    }
+)
+
+/profile
+PUT
+req.body: Profile schema 
+res.status(201).send(
+    {
+        "message": "",
+        "data": {
+            "updatedProfile": Profile Object
+        }
+    }
+)
+
+----------------------------------
+/apartment/
+GET
+req.body: {FILTERS basically apartment schema fields} 
+res.status(200).send(
+    {
+        "message": "",
+        "data": {
+            "apartments": Apartment List Object
+        }
+    }
+)
+
+/apartment/:apartmentID
+GET
+req.body: {} 
+res.status(200).send(
+    {
+        "message": "",
+        "data": {
+            "apartment": Apartment Object
+        }
+    }
+)
+
+/apartment
+POST
+req.body: Apartment schema 
+res.status(201).send(
+    {
+        "message": "",
+        "data": {
+            "createdApartment": Apartment Object
+        }
+    }
+)
+
+/apartment
+PUT
+req.body: Apartment schema 
+res.status(201).send(
+    {
+        "message": "",
+        "data": {
+            "updatedApartment": Apartment Object
+        }
+    }
+)
+
+/apartment/:apartmentID
+DELETE
+req.body: {} 
+res.status(200).send(
+    {
+        "message": "",
+        "data": {}
+    }
+)
+
+
+----------------------------------
+/roomatepreference/:userID
+GET
+req.body: {} 
+res.status(200).send(
+    {
+        "message": "",
+        "data": {
+            "roomatePreference": RoomatePreference List Object
+        }
+    }
+)
+
+
+----------------------------------
+/interestedapartment/:aptID
+GET
+req.body: {} 
+res.status(200).send(
+    {
+        "message": "",
+        "data": {
+            "userList": InterestedApartment object with user field populated
+        }
+    }
+)
+
+/interestedapartment/
+POST
+req.body: { aptID:"", userID:"" } 
+res.status(200).send(
+    {
+        "message": "",
+        "data": {
+            "interestedApartment": InterestedApartment object
+        }
+    }
+)
+
+

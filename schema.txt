@@ -1,0 +1,75 @@
+User:
+    firstName: String
+    lastName: String
+    email: String
+    showEmailPublically: default false
+    password: String
+    profileCompleted: boolean, default false
+    favouriteApartments: [Fk ApartmentID]
+    roomatePreferenceID: FK RoomatePreference
+
+Profile:
+    userID: Fk User
+    food: [Veg, Non Veg, Vegan]
+    DOB:
+    studyProgram: Fixed set of strings (hardcoded)
+    drinking:
+    smoking:
+    language: [Array]
+    cookingSkills: [Amateur, Intermediate, Expert]
+    nationailty: 
+    otherInfo:
+
+Apartment:
+    numberOfBaths:
+    numberOfBeds:
+    price:
+    address:
+    squreFeet:
+    startDate: August 2022
+    endDate: July 2023
+    deposit:
+    ownerInfo: 
+    
+    // amenities
+    laundary: 
+    dishwasher:
+    television:
+    internet:
+    petFriendly: 
+    elevator:
+    parking: 
+    otherInfo:
+
+    photos: [url1,url2,...] 
+
+InterestedApartment:
+    aptID: 
+    userID: 
+
+RoomatePreference:
+    userID: Fk User
+    FoodPreference: [Veg, Non Veg, Vegan]
+    minAge:
+    maxAge:
+    studyProgram: Fixed set of strings (hardcoded)
+    drinking: ["Yes, I am fine with it", "No, I am not fine with it"]
+    smoking: ["Yes, I am fine with it", "No, I am not fine with it"]
+    language: [Array]
+    cookingSkills: [Doesn't Matter, Amateur, Intermediate, Expert]
+    nationailty: [Doesn't Matter, abc,pp,qwas,asd]
+    otherInfo:
+
+    numberOfBeds: [Doesn't Matter,1,2,3,4,4+]
+    numberOfBaths: [Doesn't Matter,1,2,3,4,4+]
+    minPrice: 
+    maxPrice: 
+    aptStartDate: August 2022
+    aptEndDate: December 2022
+
+
+
+
+
+
+    
